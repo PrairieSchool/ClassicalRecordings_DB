@@ -1,0 +1,17 @@
+{% extends "base.htm" %}
+
+{% block content %}
+
+
+    <p class='indexIntro'>
+        This app is a web based user interface for my database of classical music recordings.<br>
+        There are <b>{{ artistCt }}</b> musicians and ensembles playing on <b>{{ recWorkCt }}</b> performances for a total of <b>{{ recWorkArtistCt }}</b> artist credits<br>
+        of <b>{{ workCt }}</b> different pieces by <b>{{ composerCt }}</b> composers<br>
+        on <b>{{ titleCt }}</b> cd, lp and 10" titles pressed on <b>{{ totalDiscCt }}</b> discs which were issued by <b>{{ labelCt }}</b> labels.<br>
+        I wrote this in <i>Python</i> using <i>Flask</i> to deploy it to a browser and <i>Psycopg</i> to interface with the <i>Postgresql</i> database. <br>
+        There are <b>14</b> tables with one-to-one, one-to-many, and many-to-many relationships.
+    </p>
+    <div>
+        <img class='ERD' src="static/images/ERD.jpg" alt="alternatetext_1" >
+    </div>
+{% endblock %}

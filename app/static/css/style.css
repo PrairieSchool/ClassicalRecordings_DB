@@ -1,0 +1,408 @@
+body {
+  font-family: verdana;
+  background-color: rgb(210, 231, 235);
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #333;
+}
+
+table { 
+  background-color: azure;
+  white-space:nowrap
+}
+
+th {
+  text-align: left;
+  padding-right: 20;
+}
+
+table, th {
+  /* border-collapse: collapse; */
+  border: 1px, solid, rgb(212, 191, 193);
+}
+
+tr:nth-child(even){
+  background-color: rgb(210, 231, 235);
+}
+
+#labelTitle tr:nth-child(even){
+  background-color: azure;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+td {
+    color: rgb(88, 86, 86);
+    font-size: 11px;
+    padding-top:4;
+    padding-bottom:4;
+}
+
+#NavBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 20;
+    overflow: hidden;
+    background-image: url("../images/linen_black.png");
+    border-radius: 5px;
+  }
+  
+#NavBar li {
+    float: left;
+  }
+
+#NavBar2 li {
+    float: right;
+  }
+
+li a {
+  display: block;
+  color: lightcoral;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: lightcoral;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: lightcoral;
+  padding: 14px 16px;
+  padding-left: 80px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* .navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+} */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  /* background-color: #333;   */
+  background-image: url("../images/linen_black.png");
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: lightcoral;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: right;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+#CatHead{
+  text-align: left;
+  /* background-color:  rgb(184, 209, 212); */
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#discHead{
+  font-size: 11px;
+}
+
+#work {
+  margin-left: 0px;
+  font-style: normal; 
+  font-size: 11px;
+  background-color: azure;
+  padding:5px;
+  padding-right:10px;
+  margin-right: 0px;
+}
+
+#work_2 {
+  margin-left:30px;
+  font-size: 12px;
+}
+
+#work_3 {
+  margin-left:20px;
+  font-size: 12px;
+}
+
+#work_4 {
+  margin-left: 20px; 
+  font-style: normal  ; 
+  font-size: 11px;
+  background-color: azure; 
+  padding:5px; 
+  padding-right:10px;
+  margin-right: 0px;
+}
+
+#title {
+  margin-left: 20px; 
+  margin-right:0px; 
+  font-size: 11px; 
+  font-weight: normal;
+}
+
+#title_2 {
+  margin-left:0px; 
+  font-size:12px;
+  background-color: azure;
+  padding:5px;
+  padding-right: 10px;
+}
+
+#title_3 {
+  margin-left:0px; 
+  font-size:12px;
+  background-color: azure;
+  padding:5px;
+}
+
+#title_4 {
+  margin-left:5px;
+  margin-right:10px;
+  font-size:14px;
+}
+
+#title_5 {
+  margin-left:20px;
+  margin-right:10px;
+  font-size:11px;
+}
+
+#notes {
+  font-size:11px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+#artist {
+  margin-left: 34px; 
+  margin-right:0px;
+  font-size: 11px;
+  background-image:none;
+  list-style-type: none;}
+
+#artist_2 {
+  font-style:bold; 
+  font-size: 16px;
+}
+
+#artist_3 {
+  font-style:bold; 
+  font-size: 16px;
+}
+
+#artist_4{
+  margin-left:40px; 
+  margin-right:10px;
+  font-size: 11px;
+}
+
+#labelHeader {
+  background-color: none;
+  padding:10px;
+  border-bottom: .5px solid #DDD;
+  color: rgb(88, 86, 86)
+} 
+
+#labelTitle_head {
+  /* background-color: rgb(210, 231, 235); */
+  font-size: 11px;
+  font-style:normal;
+  margin-left:100px;
+  color: #333;
+
+}
+
+/* Style the search lists of labels, composers, artists */
+#filterSearchList {
+  width: 30%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+  color: rgb(248, 239, 239);
+  color: #333
+}
+
+/* Style the navigation menu */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+/* Style the navigation links */
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+
+/* Style the search box */
+#composerList  {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu */
+#composerList  {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  float: left;
+  text-align: justify;
+}
+
+/* Style the navigation links */
+#composerList  a {
+  /* padding: 12px; */
+  padding-left:0px;
+  padding-right:4px;
+  text-decoration: none;
+  color: black;
+  display: blockx;
+  font-size: 14px
+}
+
+#composerList  a:hover {
+  background-color: #eee;
+}
+
+/* Style the search box */
+#artistList {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu */
+#artistList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  float: left;
+  text-align: justify;
+}
+
+#artistList a {
+  padding-left:0px;
+  padding-right:4px;
+  text-decoration: none;
+  color: black;
+  display: blockx;
+  font-size: 14px
+}
+
+#artistList a:hover {
+  background-color: #eee;
+}
+
+/* Style the search box */
+#labelList {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu */
+#labelList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  float: left;
+  text-align: justify;
+}
+
+/* Style the navigation links */
+#labelList a {
+  padding-left:0px;
+  padding-right:4px;
+  text-decoration: none;
+  color: black;
+  display: blockx;
+  font-size: 14px
+}
+
+#labelList a:hover {
+  background-color: #eee;
+}
+
+.ERD {
+  background-color: #eee;
+  /* width: 800px; */
+  /* height: 500px; */
+  position: center;
+  /* background-blend-mode: overlay; */
+  /* opacity: 0.5; */
+  mix-blend-mode: multiply;
+  /* padding-left:20px; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+}
+
+.indexIntro {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+
+}

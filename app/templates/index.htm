@@ -1,0 +1,30 @@
+{% extends "base.htm" %}
+
+{% block content %}
+    <h1>Hi, {{ user.username }} </h1>
+    {% for post in posts %}
+    <div><p><i>{{ post.author.username }}</i> says: {{ post.body }} &#8752;</p></div>
+
+    {% endfor %}
+
+
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return x==x;
+  }
+}
+</script>
+
+<body>
+
+<form name="myForm" action="/test" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+
+{% endblock %}

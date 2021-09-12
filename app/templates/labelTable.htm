@@ -1,0 +1,21 @@
+{% extends "base.htm" %}
+{% block content %}
+
+<table id="label" class="center" style="width:max-content">
+    <tr style='text-align: left;'>
+        <th>pK</th>
+        <th>label  </th>
+        <th>country  </th>
+        <th>notes  </th>
+    </tr>
+    {% for row in rows %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}  </td>
+        <td>{{ row[2] }}  </td>
+        <td><i>{{ row[3] }}  </i></td>
+
+    {% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.htm" %}
+
+{% block content %}
+
+<table id="label" class="center">
+    <tr style='text-align: left;'>
+
+        <th>record_fk</th>
+        <th>rec_work_pk /_fk</th>
+        <th>work_fk</th>
+        <th>recDate</th>
+        <th>rec_work_artist_pk</th>
+        <th>artist_fk</th>
+        <th>artist</th>
+    </tr>
+    {% for row in rows %}
+    <tr>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+        <td>{{ row[6] }}</td>
+        <td>{{ row[7] }}</td>
+        <td>{{ row[8] }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

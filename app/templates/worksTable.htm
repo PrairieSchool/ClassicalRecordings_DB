@@ -1,0 +1,25 @@
+{% extends "base.htm" %}
+{% block content %}
+
+<table class="center" style="width:max-content">
+    <tr style='text-align: left;'>
+        <th>work_pk</th>
+        <th>composer</th>
+        <th>work</th>
+        <th>type</th>
+        <th>opus</th>
+        <th>notes</th>
+    </tr>
+    {% for row in rows %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+        <td>{{ row[5] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

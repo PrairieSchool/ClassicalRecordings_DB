@@ -1,0 +1,29 @@
+{% extends "base.htm" %}
+{% block content %}
+
+<table class="center" style="width:max-content">
+    <tr style='text-align: left;'>
+        <th>pK</th>
+        <th>artist</th>
+        <th>instrument</th>
+        <th>country</th>
+        <th>first name</th>
+        <th>last name</th>
+        <th>notes</th>
+    </tr>
+    {% for row in rows %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[7] }}</td>
+        <td>{{ row[8] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+        <td><i>{{ row[2]}}</i></td>
+        
+    </tr>
+
+    {% endfor %}
+</table>
+
+{% endblock %}

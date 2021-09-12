@@ -1,0 +1,68 @@
+{% extends "base.htm" %}
+{% block content %}
+
+<input type="text" id="filterSearchList" onkeyup="filter()" placeholder="composer..." title="Composer Search">
+<button onclick="myFunction()">Click me</button>
+<p id="composerList"></p>
+<script>
+    var flaskData = JSON.parse('{{dict | tojson | safe}}');
+    var composers = flaskData.compList;
+    var text2 = "<br><a href= 'worksBy/ALL'>{ALL}  &#x25AB</a> ";
+    var i;
+    composers.forEach(function (comp) {
+        text2 += "<a href='/worksBy/"+comp+"'>" + comp + "  &#x25AB</a>"; 
+        document.getElementById("composerList").innerHTML = text2;
+        });
+
+    function filter() {
+          var input, filter, p, a, i, aa;
+          input = document.getElementById("filterSearchList");
+          filter = input.value.toUpperCase();
+          p = document.getElementById("composerList");
+          a = p.getElementsByTagName("a");
+       
+          // Loop through all list items, and hide those who don't match the search query
+          for (i = 0; i < a.length; i++) {
+            aa = p.getElementsByTagName("a")[i].innerHTML ;
+            // console.log(aa);
+
+            if (aa.toUpperCase().indexOf(filter) > -1) {
+              a[i].style.display = "";
+            } else {
+              a[i].style.display = "none";
+            }
+          }
+        }
+
+
+
+</script>
+</div>
+
+<!-- <div>
+<br>
+<table id="composer" class="center">
+    <tr style='text-align: left;'>
+        <th>pk</th>
+        <th>name</th>
+        <th>country</th>
+        <th>era</th>
+    </tr>
+    {% for row in rows %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+    </tr>
+    <tr style='font-size: 75%;'>   
+        <td></td>
+        <td><i>last name: {{ row[6] }}, {{ row[5] }}</i></td>
+        <td></td>
+    </tr> 
+    {% endfor %}
+</table>
+</div> -->
+
+
+{% endblock %}

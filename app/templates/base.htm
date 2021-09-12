@@ -1,0 +1,67 @@
+<html>
+    <style>
+    .dropdown, .dropup {
+        position: static;
+    }
+    </style>
+    <head>
+        {% if title %}
+        <title>{{ title }}: Music dB</title>
+        {% else %}
+        <title>Music DB App</title>
+        {% endif %}
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <meta charset="UTF-8">
+    </head>
+
+    <body >
+        <ul id='NavBar'>
+        <li><a href="/index_2" style='font-weight:bold'>musicDB</a></li>
+        <!-- <li><a href='/composer' target='_blank'>composer</a></li>
+        <li><a href='/opus' target='_blank'>opus</a></li>
+        <li><a href='/performer' target='_blank'>performer</a></li>
+        <li><a href='/label' target='_blank'>label</a></li>
+        <li><a href='/records' target='_blank'>records</a></li> -->
+
+            <span id='NavBar2' >
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">tables</a>
+                        <div class="dropdown-content">
+                            <a href='/labels'>labels</a>
+                            <a href='/titles'>titles</a>
+                            <a href='/artists'>artists</a>
+                            <a href='/composers'>composers</a>
+                            <a href='/works'>works</a>
+                            <a href='/manyToMany'>manyToMany</a>
+                            <!-- <a href='/index'>test_index</a> -->
+                        </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">queries</a>
+                        <div class="dropdown-content">
+                            <a href='/labelTitle'>labelTitle</a>
+                            <a href='/titleWorkArt'>titleWorkArtist</a>
+                            <a href='/artistWorkTitle'>artistWorkTitle</a>
+                            <a href='/artistTitleWork'>artistTitleWork</a>
+                            <a href='/composerWorkTitle'>composerWorkTitle</a>
+                            <a href='/composerTitleWork'>composerTitleWork</a>
+                        </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">filters</a>
+                        <div class="dropdown-content">
+                            <a href='/label_filter'>labelTitle</a>
+                            <a href='/titleWorkArt'>titleWorkArtist</a>
+                            <a href='/artist_filter'>artistWorkTitle</a>
+                            <a href='/artist_filter_2'>artistTitleWork</a>
+                            <a href='/composer_filter'>composerWorkTitle</a>
+                            <a href='/composer_filter_2'>composerTitleWork</a>
+                        </div>
+                </li>
+            </span>
+        </ul>
+        <hr>
+        {% block content %}{% endblock %}
+
+    </body>
+</html>
