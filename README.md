@@ -3,7 +3,7 @@
 This is a web-based app I wrote in **Python** and **SQL** using **Flask** and **Psycopg** with **Postgresql** as a backend server and, of course, **HTML** on the front. There is some **Javascript** in the templates and I wrote all the *.css* style sheets with no downloaded framework like **Bootstrap**. The app is a user interface for my database of classical music recordings.  
 On the home page I show an *Entity Relationship Diagaram* of the fourteen tables and a descriptive paragraph that includes live counts of rows in the database.
 
-![index.png](screenshots/index.png)
+![index_2_dark.png](screenshots/index_2_dark.png)
 
 # Filter tab
 
@@ -62,6 +62,6 @@ Here is the beginning of the CRI list.
 
 ![labelTitle_CRI.png](screenshots/labelTitle_CRI.png)
 
-The app also has two other tabs, **Queries** and **Tables**. I used these as stages in developement for reference while writing the more flexible **Filters** code. I am currently developing `ALTER TABLE` forms for data entry so I can continue to add records as I acquire them.  After that, I plan on writing a new app for my pop record collection. That will be simpler because there are fewer tables as there is no need to JOIN composers to works and works to records and artists to the recordings of these works.  
+The app also has two other tabs, **Queries** and **Tables**. I used these as stages in developement for reference while writing the more flexible **Filters** code. I am currently developing `ALTER TABLE` forms for data entry so I can continue to add records as I acquire them.  After that, I plan on writing a new app for my pop record collection. That will be simpler because there are fewer tables as there is no need to `JOIN` composers to works and works to records and artists to the recordings of these works.  
 
 
