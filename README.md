@@ -3,6 +3,7 @@
 This is a web-based app I wrote in **Python** and **SQL** using **Flask** and **Psycopg** with **Postgresql** as a backend server and, of course, **HTML** on the front. There is some **Javascript** in the templates and I wrote all the *.css* style sheets with no downloaded framework like **Bootstrap**. The app is a user interface for my database of classical music recordings.  
 On the home page I show an *Entity Relationship Diagaram* of the fourteen tables and a descriptive paragraph that includes live counts of rows in the database.
 
+
 ![index_2_dark.png](screenshots/index_2_dark.png)
 
 # Filter tab
@@ -46,7 +47,7 @@ If I scroll down, i see two recordings of one of the concertos Anne-Sophie Mutte
 
 ![composerWorkArtist_Bach1042.png](screenshots/composerWorkArtist_Bach1042.png)
 
-I also have available under the **Filters** tab a view called *composerTitleWork*. This shows a list of composers to choose, then record titles and the works featured on them. This list is sorted by the records place on my shelves and features only the works by the composer selected. For example the first record to feature JS Bach on my list is called *Albinoni: Adagio / Mendelssohn, Mozart, Bach, Pachelbel, Beethoven / Marriner*. It features pieces by six composers but this view only shows the two by Bach.
+I also have available under the **Filters** tab a view called *composerTitleWork*. This shows a list of composers to choose, then record titles and the works featured on them. This list is sorted by the record's place on my shelves and features only the works by the composer selected. For example the first record to feature JS Bach on my list is called *Albinoni: Adagio / Mendelssohn, Mozart, Bach, Pachelbel, Beethoven / Marriner*. It features pieces by six composers but this view only shows the two by Bach.
 
 ![composerTitleWork_view.png](screenshots/composerTitleWork_view.png)
 
@@ -62,6 +63,33 @@ Here is the beginning of the CRI list.
 
 ![labelTitle_CRI.png](screenshots/labelTitle_CRI.png)
 
-The app also has two other tabs, **Queries** and **Tables**. I used these as stages in developement for reference while writing the more flexible **Filters** code. I am currently developing `ALTER TABLE` forms for data entry so I can continue to add records as I acquire them.  After that, I plan on writing a new app for my pop record collection. That will be simpler because there are fewer tables as there is no need to `JOIN` composers to works and works to records and artists to the recordings of these works.  
+# Input tab
+
+Under the **Iput** tab, i can enter data into the database.  The main table in this database is the *record* table as it links to all the other tables.  Under the Input tab I can enter new composers, artists, works and labels.  Most importantly I can add new records to the collection which includes the works played and the musicians playing on each work. 
+
+![titleInput.png](screenshots/titleInput.png)
+
+This input form includes a *frame* that shows the work in progress as a check on accuracy and a place keeper on the entry. Below is the *record* input section that shows the *work* and *artist* forms and the current work in progress.       
+
+![workArtistInput.png](screenshots/workArtistInput.png)
+
+
+# Master Filter
+
+As I developed in input page using *Flask Forms* I decided to use dropdown boxes on a *Master Filter* page that would provide all the choices on one page. Because populating the dropdown boxes uses no *Javascript* it takes a small fraction of the time to communicate with the database. In this screenshot I have populated the three *SelectFields*. From this single page I now have access to *composerWorkTitle*, *composerTitleWork*, *aristWorkTitle*, *artistTitleWork* views and the *label* view.
+
+![masterFIlter_2.png](screenshots/masterFIlter_2.png)
+
+I have added an additional view called *works by pk* to show the works of any chosen composer ordered by my own system of index naming. This view makes it easier to decide if I need to add a new work to the database or if it already exists. In this screenshot you can see a partial list of works by Mahler.
+
+![worksByPK_Mahler.png](screenshots/worksByPK_Mahler.png)
+
+As I was learning to work with *Forms* I continued to use discreet `.py` scripts to avoid redundancy in my main script, `routes.py`. I also started writing classes to create objects that would make the operation more efficient.
+
+![classObject_sample.png](screenshots/classObject_sample.png)
+
+The app also has two other tabs, **Queries** and **Tables**. I used these as stages in developement for reference while writing the more flexible **Filters** code. As I have been using the app I have found myself having to use my code editor or pgAdmin to run `SELECT` queries to find specific details. I am currently planning new views to streamline the data entry process. I am also considering writing pages to edit the database in case i need to make corrections or add data to exisitng records.
+
+I have also written another app similar to this one for **Pop Records**, which includes anything that doesn't require notating composers, works and artists.  There are, therefore, no *many to many* tables required or any of the more complicated `JOIN` statements. It is a lot simpler and has proven to be very useful.
 
 
