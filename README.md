@@ -78,7 +78,7 @@ This input form includes a *frame* that shows the work in progress as a check on
 
 As I developed in input page using *Flask Forms* I decided to use dropdown boxes on a *Master Filter* page that would provide all the choices on one page. Because populating the dropdown boxes uses no *Javascript* it takes a small fraction of the time to communicate with the database. In this screenshot I have populated the three *SelectFields*. From this single page I now have access to *composerWorkTitle*, *composerTitleWork*, *aristWorkTitle*, *artistTitleWork* views and the *label* view.
 
-![masterFIlter_2.png](screenshots/masterFIlter_2.png)
+![masterFilter_2.png](screenshots/masterFilter_2.png)
 
 I have added an additional view called *works by pk* to show the works of any chosen composer ordered by my own system of index naming. This view makes it easier to decide if I need to add a new work to the database or if it already exists. In this screenshot you can see a partial list of works by Mahler.
 
