@@ -65,7 +65,7 @@ Here is the beginning of the CRI list.
 
 # Input tab
 
-Under the **Iput** tab, i can enter data into the database.  The main table in this database is the *record* table as it links to all the other tables.  Under the Input tab I can enter new composers, artists, works and labels.  Most importantly I can add new records to the collection which includes the works played and the musicians playing on each work. 
+Under the **Input** tab, i can enter data into the database.  The main table in this database is the *record* table as it links to all the other tables.  Under the Input tab I can enter new composers, artists, works and labels.  Most importantly I can add new records to the collection which includes the works played and the musicians playing on each work. 
 
 ![titleInput.png](screenshots/titleInput.png)
 
